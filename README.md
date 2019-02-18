@@ -15,4 +15,5 @@ Our group game project for our Mobile Games class @ Cabrillo for Spring 2019. Cr
 ## Members:
 
 - Warren Ngoun (warren.ngoun@gmail.com)
-- (Add your names/emails guys)
+- Christopher Perez (chrisperez811998@gmail.com)
+- enter name and email here
