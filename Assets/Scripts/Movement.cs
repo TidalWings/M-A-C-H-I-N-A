@@ -11,9 +11,14 @@ public class Movement : MonoBehaviour {
 	}
 
 	void Update () {
-		float deltaX = Input.GetAxis("Horizontal") * speed;
-		float deltaZ = Input.GetAxis("Vertical") * speed;
+		float deltaX = Input.GetAxis("Horizontal") * speed;  
+		float deltaZ = Input.GetAxis("Vertical") * speed; 
+		 
+		transform.Translate(-(deltaX * Time.deltaTime), deltaZ * Time.deltaTime, 0); 
 
-		transform.Translate(deltaX, 0, deltaZ);
+		// float deltaX = Input.GetAxis("Horizontal") * speed;
+		// float deltaZ = Input.GetAxis("Vertical") * speed;
+
+		// transform.Translate(deltaX, 0, deltaZ);
 	}
 }
