@@ -19,3 +19,11 @@ Our group game project for our Mobile Games class CIS 35 @ Cabrillo for Spring 2
 - Christopher Perez (chrisperez811998@gmail.com)
 - Ethan Osborne Berman (ethberman@gmail.com)
 - Pablo Castillo (r3dg3ar@hotmail.com)
+
+## Resources
+- Prof. Steve
+- Game Design Workshop
+- Unity in Action
+- Blender
+- Blender guide:
+- Donut Birbs
