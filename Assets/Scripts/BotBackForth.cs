@@ -26,7 +26,7 @@ public class BotBackForth : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= pause_time) {
-			// TODO: One-line this If
+			// TODO: One-line this "If"
             if (flip) {
                 nav_agent.SetDestination(nav_point);
             } else {

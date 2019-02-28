@@ -8,6 +8,7 @@ using UnityEngine.AI;
 // 		https://www.youtube.com/watch?v=GANwdCKoimU
 // 		https://docs.unity3d.com/Manual/nav-MoveToClickPoint.html
 //		https://www.youtube.com/watch?v=CHV1ymlw-P8
+// 		https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html
 
 public class ClickMove : MonoBehaviour {
 	
@@ -20,9 +21,14 @@ public class ClickMove : MonoBehaviour {
 			RaycastHit rayHit;
 			if (Physics.Raycast(ray, out rayHit)) {
 				// This takes the Point from the rayHit and sets it as our NavMesh Agent
-				// https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html
 				GetComponent<NavMeshAgent>().SetDestination(rayHit.point);
 			}
 		}
+	}
+
+	// This is for QuickReview to have a component to latch onto for example purposes
+	// TODO: Figure out why there's a ambiguous function error
+	public void painedScreaming() {
+		Debug.Log("Ow.");
 	}
 }

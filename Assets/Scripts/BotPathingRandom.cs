@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // This was taken from a site for example purposes:
-// https://forum.unity.com/threads/solved-random-wander-ai-using-navmesh.327950/
+//      https://forum.unity.com/threads/solved-random-wander-ai-using-navmesh.327950/
 
 public class BotPathingRandom : MonoBehaviour {
 
 	// Initializing variables
     public float radius;
     public float time;
+    // Nav Mesh Agent is the component that we attach to players/enemies to allow them to path on the Nav Mesh
     private NavMeshAgent nav_agent;
     private float timer;
 
@@ -31,7 +32,7 @@ public class BotPathingRandom : MonoBehaviour {
         }
     }
 
-	// This function gets a random point on the NavMesh inside of a certain radius
+	// This function uses a Unit Sphere to grab a random point on the NavMesh inside of a what radius you defined for the sphere
     public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask) {
         Vector3 randDirection = Random.insideUnitSphere * dist;
         randDirection += origin;

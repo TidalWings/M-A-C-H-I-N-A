@@ -2,12 +2,13 @@
 
 // These are the default "imports" for each C# script in Unity
 using System.Collections;
-using System.Collecions.Generic;
+using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.AI; // This if for dealing w/ NavMeshes
 using UnityEngine.SceneManagement; // This is for Scene transitions
 
-public class Unity Quick Review : MonoBehaviour {
+public class UnityQuickReview : MonoBehaviour {
 
     // Int, Float, Bool are all famililar returning variable types
     private int whole_timer = 60;
@@ -20,6 +21,8 @@ public class Unity Quick Review : MonoBehaviour {
     [SerializeField] private GameObject _enemy;
     // Vector3's are just the X Y Z coordinate system and is used to represent a point.
     private Vector3 enemy_coords;
+    // BUT Vector3's are also a STRUCT meaning if we predeclare it like below we'll need to include the New Vector3 keywords.
+    private Vector3 ally_coords = new Vector3 (0, 11, 1);
     // A Nav Mesh Agent allows our Player/Obj to Navigate the NavMesh to path around the "world"
     private NavMeshAgent player_controller;
 
@@ -41,20 +44,22 @@ public class Unity Quick Review : MonoBehaviour {
 
         // Time.deltaTime lets us account for variable FPS and make FPS independent code for certain actions.
         timer += Time.deltaTime;
-        if (timer >= whole_timer) Debug.log("Timer reset!");
+        if (timer >= whole_timer) Debug.Log("Timer reset!");
 
         // Input is how we grab direct input from something like the keyboard or mouse
         // GetMouseButtonDown takes either "0 = LMB" "1 = RMB" or "2 = MMB"
-        if (Input.GetMouseButtonDown(0)) player_controller.SetDestination(0, 0, 0);
-        // GetKeyDown checks for a Keyboard press
-        // Debug.log is our "echo" and method to print to console.
-        if (Input.GetKeyDown("space")) Debug.log("Space was pressed");
+        if (Input.GetMouseButtonDown(0)) player_controller.SetDestination(ally_coords);
+        // GetKeyDown checks for a Keyboard press. It returns a BOOL.
+        // Debug.Log is our "echo" and method to print to console.
+        if (Input.GetKeyDown("space")) Debug.Log("Space was pressed");
 
         // GetAxis gets "keybindings" for a certain controller type. Here "vertical" and "horizontal" mean WASD or the Arrow Keys on a KB.
-        if (Input.GetAxis("Vertical")) {
+        // GetAxis Unlike GetKey RETURNS a FLOAT so we need to compare it to a number in our Ifs
+        if (Input.GetAxis("Vertical") != 0) {
+            float moveX = Input.GetAxis("Vertical") * speed;
             // Translate lets us move the position of a Objs transform position.
-            item.transform.Translate(0, 0, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-        } else if (Input.GetAxis("Horizontal")) {
+            item.transform.Translate(0, 0, moveX * Time.deltaTime);
+        } else if (Input.GetAxis("Horizontal") != 0) {
             // Time.deltaTime makes it so movement isn't dependent on FPS since Update calls once a frame
             item.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0); 
         }
@@ -67,9 +72,10 @@ public class Unity Quick Review : MonoBehaviour {
 
         if (_enemy == null) {
             // Instantiate creates this prefab onto the world i.e. Spawns them. Instantiate creates them as a generic type, so we typecase with "as GameObject" to make it not generic.
-            _enemy.Instantiate (enemyPrefab) as GameObject;
+            GameObject enemyPrefab = (GameObject) Instantiate(_enemy);
             // All Objs in the scene view have a transform, here you can modify that transforms position depending on a Vector3
-            _enemy.transform.position = new Vector3 (0, 1, 0);
+            _enemy.transform.position = enemy_coords;
+            enemyPrefab.GetComponent<NavMeshAgent>();
         }
 
 		if (Input.GetMouseButtonDown(1)) {
@@ -85,15 +91,15 @@ public class Unity Quick Review : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
 
         // PlayerCharacter here is a name of a script we've attached to another GameObj. Here we check to see if the OTHER thing we've collided w/ has that script attached to it (by checking it's components to see if the script name is there).
-        PlayerCharacter player = other.GetComponent<PlayerCharacter>();
+        ClickMove player = other.GetComponent<ClickMove>();
         // So we'd just check if that component was null or not to test collision.
         if (player != null) {
-            Debug.log("Hit a player");
+            Debug.Log("Hit a player");
             // This is us calling the takeDamage function from the attached PlayerCharacter script
-            player.takeDamage(damage);
+            player.painedScreaming();
         }
         // Destroys whatever GameObjs is in the parameter, in this case it kills itself.
-        Destroy (this.GameObject);
+        Destroy (this);
     }
 
     // You can also create public functions other scripts/Objs can trigger or make it Private and use it only for this Obj instead.
