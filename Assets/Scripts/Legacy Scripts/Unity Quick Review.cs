@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement; // This is for Scene transitions
 
 public class UnityQuickReview : MonoBehaviour {
 
-    // Int, Float, Bool are all famililar returning variable types
+    // Int, Float, Bool are all familiar returning variable types
     private int whole_timer = 60;
     private float timer = 0.0f; // 0.0f means a float, this is just an extra "just incase" step
     private float speed = 1.0f;
@@ -28,7 +28,7 @@ public class UnityQuickReview : MonoBehaviour {
 
     // Awake() or Start() runs ONCE per Obj only and is usually used for Initialization
     void Start() {
-        // You can refernce "this" as the Obj this script is attached too and grab it's components
+        // You can reference "this" as the Obj this script is attached too and grab it's components
         enemy_coords = this.transform.position;
         // Get component allows us to grab whatever components we need to on an Obj, in this case we grab this Objs Nav Mesh Agent
         player_controller = GetComponent<NavMeshAgent>();
@@ -68,6 +68,8 @@ public class UnityQuickReview : MonoBehaviour {
             // SceneManager will load a scene for us depending on what the scenes "Index" is under our build settings.
             // (Note: This is only the "Loading" and not any of the animation for the screen transition itself)
             SceneManager.LoadScene(0);
+            // SceneManager ALSO can load a scene on it's name.
+            SceneManager.LoadScene("Menu");
         }
 
         if (_enemy == null) {
@@ -83,13 +85,23 @@ public class UnityQuickReview : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit rayHit; 
             // Physics.Raycast returns True if the Ray has intersected a collider, False if something w/out a collider. This lets us determine if our Ray from earlier is a valid point on the screen.
-			if (Physics.Raycast(ray, out rayHit)) GetComponent<NavMeshAgent>().SetDestination(rayHit.point);
+			if (Physics.Raycast(ray, out rayHit)) {
+                GetComponent<NavMeshAgent>().SetDestination(rayHit.point);
+                // NavMeshAgents have multiple components we can grab, Speed here is an example of grabbing one.
+                GetComponent<NavMeshAgent>().speed = 2.0f;
+                // We can compile an array of GameObjects by looking for them by Tag OR
+                GameObject[] items = GameObject.FindGameObjectsWithTag("Sweets");
+                // We can find just a single GameObject by using the singular function
+                GameObject item = GameObject.FindGameObjectWithTag("Sweets");
+            }
 		}
     }
 
     // OnTriggerEnter() gets called when this GameObject collides with another GameObject. The parameter Collider it takes is the OTHER collider not THIS.
     void OnTriggerEnter(Collider other) {
 
+        // GameObjects have components, name here is an example of how to call one
+        Debug.Log(other.gameObject.name);
         // PlayerCharacter here is a name of a script we've attached to another GameObj. Here we check to see if the OTHER thing we've collided w/ has that script attached to it (by checking it's components to see if the script name is there).
         ClickMove player = other.GetComponent<ClickMove>();
         // So we'd just check if that component was null or not to test collision.
@@ -111,5 +123,10 @@ public class UnityQuickReview : MonoBehaviour {
         NavMesh.SamplePosition(randDirection, out navHit, radius, -1);
         // Then we return the sampled NavMesh point (a Vector3) by using its position component
         return navHit.position;
+    }
+
+    public void EndGame() {
+        // This function Kills the program, In Editor it does nothing but in Builds it does
+        Application.Quit();
     }
 }
