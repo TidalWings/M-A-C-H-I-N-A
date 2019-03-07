@@ -112,7 +112,7 @@
     </member>
     <member name="M:UnityEngine.CharacterController.Move(UnityEngine.Vector3)">
       <summary>
-        <para>A more complex move function taking absolute movement deltas.</para>
+        <para>A more complex Move member taking absolute movement deltas.</para>
       </summary>
       <param name="motion"></param>
     </member>

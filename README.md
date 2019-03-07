@@ -31,7 +31,7 @@ Our group game project for our Mobile Games class CIS 35 @ Cabrillo for Spring 2
 - Game Design Workshop
 - Unity in Action
 - Blender
-- Blender Guide:
+- Blender Guide: https://www.katsbits.com/tutorials/blender/character-beginning.php
 - Donut Birbs
 - Brackeys YouTube Tutorials (https://www.youtube.com/user/Brackeys)
 - Unity Threads on "AI" Pathing: https://forum.unity.com/threads/solved-random-wander-ai-using-navmesh.327950/
