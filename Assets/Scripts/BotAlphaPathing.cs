@@ -53,6 +53,6 @@ public class BotAlphaPathing : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider other) {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Battle");
     }
 }

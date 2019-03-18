@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -243,9 +243,40 @@ Prefab:
     - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
         type: 2}
       propertyPath: scene_index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65243571076256646, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: scene_name
+      value: Tutorial_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65243571076256646, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
+        type: 2}
+      propertyPath: nextScene
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1894871069
