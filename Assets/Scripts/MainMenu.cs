@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 	// TODO: Make Main Menu work
 	public void PlayButton() {
-		SceneManager.LoadScene(5);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}	
 
 	public void EndGame() {
+		Debug.Log ("QUIT!");
 		Application.Quit();
 	}
 }
