@@ -17,6 +17,8 @@ public class NavigationSprite : MonoBehaviour {
 			if (items.Length != 0) { foreach (GameObject _ in items) Destroy(_); }
 			// TODO: Instantiate w/out creating an empty var (compiler complains)
 			GameObject obj = Instantiate(nav_sprite, new Vector3(rayHit.point.x, (rayHit.point.y + 0.1f), rayHit.point.z), Quaternion.Euler(new Vector3(90, 0, 0))) as GameObject;
+			// TODO: Properly Instantiate ABOVE item. This is another spaghetti fix so that it does "Something" to make the compiler not complain.
+			Debug.Log(obj);
         }
 	}
 

@@ -91,8 +91,10 @@ public class UnityQuickReview : MonoBehaviour {
                 GetComponent<NavMeshAgent>().speed = 2.0f;
                 // We can compile an array of GameObjects by looking for them by Tag OR
                 GameObject[] items = GameObject.FindGameObjectsWithTag("Sweets");
+                Destroy(items[0]);
                 // We can find just a single GameObject by using the singular function
                 GameObject item = GameObject.FindGameObjectWithTag("Sweets");
+                Destroy(item);
             }
 		}
     }
@@ -112,6 +114,8 @@ public class UnityQuickReview : MonoBehaviour {
         }
         // Destroys whatever GameObjs is in the parameter, in this case it kills itself.
         Destroy (this);
+        // This is also an example of destroying the GAMEOBJECT the script is attached to
+        Destroy (gameObject);
     }
 
     // You can also create public functions other scripts/Objs can trigger or make it Private and use it only for this Obj instead.

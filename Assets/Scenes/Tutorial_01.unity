@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -197,87 +197,56 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bdafc2e638cf8044aec8810ccc95e11, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &530510902
+--- !u!1001 &1336264535
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalPosition.x
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalPosition.y
       value: 4.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4160291965974722, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1996460737543398, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
-      propertyPath: m_Name
-      value: Door to 02
-      objectReference: {fileID: 0}
-    - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: scene_index
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 65243571076256646, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
+    - target: {fileID: 114942637260848540, guid: ea584e0aee893ba418143624680dcd77,
         type: 2}
       propertyPath: scene_name
       value: Tutorial_02
       objectReference: {fileID: 0}
-    - target: {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
+    - target: {fileID: 1707342818097662, guid: ea584e0aee893ba418143624680dcd77, type: 2}
+      propertyPath: m_Name
+      value: Door to 02
       objectReference: {fileID: 0}
-    - target: {fileID: 65243571076256646, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114404273575159312, guid: dd355e6ffc61ab842a1084e17f026d00,
-        type: 2}
-      propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 65928913555045164, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: dd355e6ffc61ab842a1084e17f026d00, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ea584e0aee893ba418143624680dcd77, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1894871069
 Prefab:
@@ -316,7 +285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658861956599326, guid: 2c4819400725ed342b4234ba960e57d7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4658861956599326, guid: 2c4819400725ed342b4234ba960e57d7, type: 2}
       propertyPath: m_LocalScale.x

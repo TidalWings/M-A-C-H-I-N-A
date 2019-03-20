@@ -12,13 +12,15 @@ public class SceneSwapTest : MonoBehaviour {
 		// GetKeyDown is just grabbing keyboard input
 		if (Input.GetKeyDown("1")) {
 			// The number in LoadScene refers to the "index" of the desired scene under the games build settings
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("Tutorial_01");
         } else if (Input.GetKeyDown("2")) {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Tutorial_02");
 		} else if (Input.GetKeyDown("3")) {
-			SceneManager.LoadScene(2);
+			SceneManager.LoadScene("Tutorial_03");
 		} else if (Input.GetKeyDown("4")) {
-			SceneManager.LoadScene(3);
+			SceneManager.LoadScene("Tutorial_04");
+		} else if (Input.GetKeyDown("5")) {
+			SceneManager.LoadScene("Battle");
 		}
 	}
 }
