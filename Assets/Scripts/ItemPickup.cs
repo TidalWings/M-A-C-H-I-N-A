@@ -21,6 +21,7 @@ public class ItemPickup : MonoBehaviour {
 
 		if (other.gameObject.name == "Player") {
 			Destroy (gameObject);
+			Debug.Log ("pickup");
 		}
 
 		// TODO: Add Left Click feature cause current implentation is for convenience
