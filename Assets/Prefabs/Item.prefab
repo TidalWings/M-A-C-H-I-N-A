@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23450603994706774}
   - component: {fileID: 114639562329647978}
   - component: {fileID: 114164409885217076}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4318002661580262}
   - component: {fileID: 108379608025870240}
   - component: {fileID: 114665159209689250}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Item Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
