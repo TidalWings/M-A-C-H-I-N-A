@@ -95,6 +95,13 @@ public class UnityQuickReview : MonoBehaviour {
                 // We can find just a single GameObject by using the singular function
                 GameObject item = GameObject.FindGameObjectWithTag("Sweets");
                 Destroy(item);
+                // Tags are useful for marking certain GameObjects to belong in certain categories, like marking all the ground Objects as "Ground" to make sure that you can't interact/click/etc. with something that isn't that.
+                // In this case, we can also take the TAG from a Raycast Hit to quickly verify what we hit is correct
+                if (rayHit.transform.tag == "Ground") {
+                    Debug.Log("This is the ground?");
+                } else {
+                    Debug.Log("No this is Sweets!");
+                }
             }
 		}
     }
@@ -132,5 +139,17 @@ public class UnityQuickReview : MonoBehaviour {
     public void EndGame() {
         // This function Kills the program, In Editor it does nothing but in Builds it does
         Application.Quit();
+    }
+
+    public void SimplePathMovement() {
+        bool flip = false;
+        Vector3 test_point = new Vector3(0, 0, 0);
+
+        if (flip) {
+            // In Vector3, there is a function that lets you move from one point to another in stepped increments
+            transform.position = Vector3.MoveTowards(transform.position, test_point, Time.deltaTime);
+        } else {
+            Debug.Log("Something else?");
+        }
     }
 }
