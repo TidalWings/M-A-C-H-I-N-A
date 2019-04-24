@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 195366421076395324}
   - component: {fileID: 114120964421510060}
   - component: {fileID: 54862434035579998}
+  - component: {fileID: 114141894965416308}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -247,6 +248,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nav_sprite: {fileID: 1827655385692544, guid: c1984d18550f0bc439ab2bdf221b3cb1, type: 2}
+--- !u!114 &114141894965416308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1232161589176326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fdc7cba1e080de468f405133964ed09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorSprite: {fileID: 2800000, guid: 3540b30436b7dd04b80962e2edfc37ab, type: 3}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!124 &124152475053751374
 Behaviour:
   m_ObjectHideFlags: 1
