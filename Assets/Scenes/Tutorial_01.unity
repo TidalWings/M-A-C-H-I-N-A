@@ -463,6 +463,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1044148270359050, guid: 2c4819400725ed342b4234ba960e57d7, type: 2}
+      propertyPath: m_Name
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c4819400725ed342b4234ba960e57d7, type: 2}
   m_IsPrefabParent: 0
