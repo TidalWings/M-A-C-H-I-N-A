@@ -21,7 +21,7 @@ public class DoorTransition : MonoBehaviour {
 	public void OnTriggerEnter(Collider other) {
 		//yield return new WaitForSeconds (1f);
 		StartCoroutine(SmoothTransition());
-		Debug.Log (other.gameObject.name);
+		// Debug.Log (other.gameObject.name);
 		SceneManager.LoadScene (scene_name);
 	}
 
