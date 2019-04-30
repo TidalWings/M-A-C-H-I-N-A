@@ -13,7 +13,7 @@ public class MainPlayer : MonoBehaviour {
             RaycastHit rayHit;
             if (Physics.Raycast(ray, out rayHit)) {
                 // This checks to make sure that we can ONLY click on the pathable ground
-                if (rayHit.transform.tag == "Ground") {
+                if (rayHit.transform.tag == "Ground" || rayHit.transform.tag == "Door") {
                     GetComponent<NavMeshAgent>().SetDestination(rayHit.point);
                     // Here we create an array of all Objs that are Clones of Sweets by checking for Tags
                     GameObject[] items = GameObject.FindGameObjectsWithTag("Sweets");
