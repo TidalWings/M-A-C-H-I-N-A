@@ -7,6 +7,7 @@ TagManager:
   - Sweets
   - Ground
   - Item
+  - Door
   layers:
   - Default
   - TransparentFX

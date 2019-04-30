@@ -14,12 +14,22 @@ public class RoomTransition : MonoBehaviour {
 	}
 
 	void Update () {
-		// This runs on a NEW SCENE, DO whatever in this IF you need to
 		if (current_scene != SceneManager.GetActiveScene().name) {
+			// This runs on a NEW SCENE, DO whatever in this IF you need to
 			previous_scene = current_scene;
 			current_scene = SceneManager.GetActiveScene().name;
-			
-			
+
+            GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
+			foreach(var item in doors) {
+				if (previous_scene == item.GetComponent<DoorTransition>().scene_name) {
+					// Grab the Coordinates of the Spawn Point on Each Door
+					item.;
+					// Set the Player to that corresponding spawn point
+				}			
+			}
+
+			Debug.Log("This was previous scene: " + previous_scene);
+			// Debug.Log("This was current scene: " + current_scene);
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
