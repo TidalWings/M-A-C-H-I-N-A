@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour {
-
+	bool pickup = false;
+	[SerializeField] GameObject pickupWindow;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,12 @@ public class ItemPickup : MonoBehaviour {
 		// Debug.Log("HIT");
 
 		if (other.gameObject.name == "Player") {
-			Destroy (gameObject);
+			//pickup code goes before destroy
+			pickup = true;
+			this.Open ();
+			gameObject.SetActive (false);
+			//pickupWindow.SetActive (true);
+			//Destroy (gameObject);
 			Debug.Log ("pickup");
 		}
 
@@ -37,5 +43,25 @@ public class ItemPickup : MonoBehaviour {
         //         }
         //     }
         // }
+	}
+	public void OptionOne() {
+		//put inventory code here
+		pickupWindow.SetActive (false);
+		Debug.Log ("item1");
+		Destroy (gameObject);
+	}
+
+	public void OptionTwo() {
+		//put inventory code here
+		pickupWindow.SetActive (false);
+		Debug.Log ("item2");
+		Destroy (gameObject);
+	}
+
+	public void Open() {
+		Debug.Log (pickup);
+		if (pickup == true) {
+			pickupWindow.SetActive (pickup);
+		}
 	}
 }
