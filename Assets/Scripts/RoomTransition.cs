@@ -3,34 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * https://www.youtube.com/watch?v=2PJ99qDsZq4
+ */
+
 public class RoomTransition : MonoBehaviour {
 	private string current_scene;
 	private string previous_scene;
-	public GameObject Player;
+	// CHECKING CLASS INSTANCES IS PART OF THE SINGLETON PATTERN
+	private static RoomTransition _instance = null;
+	public static RoomTransition Instance {
+		get { return _instance; }
+	}
 
-	void Start () {
+    void Awake() {
+		// PART OF THE SINGLETON PATTERN
+		if (_instance == null) {
+			_instance = this;
+			DontDestroyOnLoad(this);
+		} else {
+			Destroy(this.gameObject);
+		}
         current_scene = SceneManager.GetActiveScene().name;
         previous_scene = SceneManager.GetActiveScene().name;
-	}
+    }
 
 	void Update () {
 		if (current_scene != SceneManager.GetActiveScene().name) {
 			// This runs on a NEW SCENE, DO whatever in this IF you need to
 			previous_scene = current_scene;
 			current_scene = SceneManager.GetActiveScene().name;
+			GameObject[] spawn_point = GameObject.FindGameObjectsWithTag("Spawn Point");
+			GameObject Player = GameObject.FindGameObjectWithTag("Player");
 
-            GameObject[] doors = GameObject.FindGameObjectsWithTag("Door");
-			foreach(var item in doors) {
-				if (previous_scene == item.GetComponent<DoorTransition>().scene_name) {
-					// Grab the Coordinates of the Spawn Point on Each Door
-					item.;
-					// Set the Player to that corresponding spawn point
-				}			
+			foreach (var item in spawn_point) {
+				if (item.name == previous_scene) {
+					Player.transform.position = item.transform.position;
+				}
 			}
-
-			Debug.Log("This was previous scene: " + previous_scene);
-			// Debug.Log("This was current scene: " + current_scene);
 		}
-		DontDestroyOnLoad(this.gameObject);
 	}
 }
