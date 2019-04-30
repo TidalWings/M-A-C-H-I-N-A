@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 public class RoomTransition : MonoBehaviour {
 	private string current_scene;
 	private string previous_scene;
+	public float skybox_speed = 0.25f;
 	// CHECKING CLASS INSTANCES IS PART OF THE SINGLETON PATTERN
 	private static RoomTransition _instance = null;
 	public static RoomTransition Instance {
@@ -42,5 +43,7 @@ public class RoomTransition : MonoBehaviour {
 				}
 			}
 		}
-	}
+		// Rotates the Skybox
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time * skybox_speed); 
+    }
 }

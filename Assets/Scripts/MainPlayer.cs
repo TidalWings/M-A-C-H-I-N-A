@@ -32,4 +32,8 @@ public class MainPlayer : MonoBehaviour {
             Destroy(other.gameObject);
         }
     }
+
+    public void disableNavMesh() {
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+    }
 }
