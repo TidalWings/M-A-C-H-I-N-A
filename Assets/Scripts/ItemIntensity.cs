@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemIntensity : MonoBehaviour {
 
 	public float timer = 0.1f;
-	public float intensity_value = 0.5f;
+	public float intensity_value = 1.0f;
 	Light item_light;
 	// TODO: Use things like Mathf.lerp to ACTUALLY do proper transitioning of light intensity values
 	private bool light_flip = true;

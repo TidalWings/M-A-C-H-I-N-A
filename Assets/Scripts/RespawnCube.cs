@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class RespawnCube : MonoBehaviour {
 
-	[SerializeField] GameObject spawn_point;
+	[SerializeField] string World_Respawn_Name;
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.gameObject.name == "Player") {
-			SceneManager.LoadScene("Box_World_02");
+			SceneManager.LoadScene(World_Respawn_Name);
 		}
 	}
 }

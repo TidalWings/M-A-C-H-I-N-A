@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.11580048, g: 0.18743289, b: 0.37142316, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -323,12 +323,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea584e0aee893ba418143624680dcd77, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &970080339 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114639562329647978, guid: a9a0e08cb61a1b44fa3ae3273e689455,
-    type: 2}
-  m_PrefabInternal: {fileID: 1552148061}
-  m_Script: {fileID: 11500000, guid: ec263bba69dba854795212381145af48, type: 3}
 --- !u!1001 &919784239
 Prefab:
   m_ObjectHideFlags: 0
@@ -403,6 +397,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa9d53bc5a2fee3429cfbd6937915edc, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &970080339 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114639562329647978, guid: a9a0e08cb61a1b44fa3ae3273e689455,
+    type: 2}
+  m_PrefabInternal: {fileID: 1552148061}
+  m_Script: {fileID: 11500000, guid: ec263bba69dba854795212381145af48, type: 3}
 --- !u!1001 &1166226460
 Prefab:
   m_ObjectHideFlags: 0
@@ -960,6 +960,11 @@ Prefab:
       propertyPath: pickupWindow
       value: 
       objectReference: {fileID: 1288478968}
+    - target: {fileID: 114665159209689250, guid: a9a0e08cb61a1b44fa3ae3273e689455,
+        type: 2}
+      propertyPath: intensity_value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9a0e08cb61a1b44fa3ae3273e689455, type: 2}
   m_IsPrefabParent: 0
@@ -1011,6 +1016,11 @@ Prefab:
       propertyPath: pickupWindow
       value: 
       objectReference: {fileID: 1572855350}
+    - target: {fileID: 114665159209689250, guid: a9a0e08cb61a1b44fa3ae3273e689455,
+        type: 2}
+      propertyPath: intensity_value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9a0e08cb61a1b44fa3ae3273e689455, type: 2}
   m_IsPrefabParent: 0
@@ -1072,6 +1082,11 @@ Prefab:
         type: 2}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108018837098057202, guid: ce1dc523232534b4ab2bf737f61a18c1,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce1dc523232534b4ab2bf737f61a18c1, type: 2}
