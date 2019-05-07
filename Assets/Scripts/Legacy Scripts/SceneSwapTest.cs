@@ -20,7 +20,23 @@ public class SceneSwapTest : MonoBehaviour {
 		} else if (Input.GetKeyDown("4")) {
 			SceneManager.LoadScene("Tutorial_04");
 		} else if (Input.GetKeyDown("5")) {
-			SceneManager.LoadScene("Battle");
+			SceneManager.LoadScene("Box_World_01");
+		} else if (Input.GetKeyDown("6")) {
+			SceneManager.LoadScene("Box_World_02");
+		} else if (Input.GetKeyDown("7")) {
+			SceneManager.LoadScene("Box_World_03");
+		} else if (Input.GetKeyDown("8")) {
+			SceneManager.LoadScene("Box_World_04");
+		} else if (Input.GetKeyDown("9")) {
+            SceneManager.LoadScene("Boss_Room");
+        } else if (Input.GetKeyDown("0")) {
+            // GameObject Player = GameObject.FindGameObjectWithTag("Player");
+			// Debug.Log("This is Current Position: " + Player.transform.position);
+			if (SceneManager.GetActiveScene().name == "Battle") {
+                // TODO: Write "Win Code Here
+                GameObject Controller = GameObject.FindGameObjectWithTag("GameController");
+				Controller.GetComponent<RoomTransition>().loadPrev();
+            }
 		}
 	}
 }

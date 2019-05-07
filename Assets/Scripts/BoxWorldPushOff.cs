@@ -24,6 +24,9 @@ public class BoxWorldPushOff : MonoBehaviour {
 		// TODO: If the Player isn't falling re-enable NavMesh
         yield return new WaitForSeconds(1.5f);
 		// ActualPlayer.GetComponent<MainPlayer>().enableNavMesh();
-		ActualPlayer.GetComponent<MainPlayer>().enableNavMesh();
+		if (!(ActualPlayer.transform.position.y <= 4.5)) {
+			ActualPlayer.GetComponent<MainPlayer>().enableNavMesh();
+			// Debug.Log("Kek");
+		}
 	}
 }

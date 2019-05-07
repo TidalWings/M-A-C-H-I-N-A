@@ -27,5 +27,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Box_World_02.unity
     guid: e12318d29fc80b84d869fb45d6e2659c
   - enabled: 1
+    path: Assets/Scenes/Box_World_03.unity
+    guid: 2a59730d84c0cc24cb751581ad6996c6
+  - enabled: 1
+    path: Assets/Scenes/Box_World_04.unity
+    guid: c1172f502d6da9346a01f48d209d6c5f
+  - enabled: 1
+    path: Assets/Scenes/Boss_Room.unity
+    guid: e0eac06c356b60c4ba8c71882caacf8d
+  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 019395d4dd2d949459f106e938f3ea24

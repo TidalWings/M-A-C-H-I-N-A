@@ -7,17 +7,7 @@ public class MainPlayer : MonoBehaviour {
 	
     public GameObject nav_sprite;
 
-    private float stored_fall = 0.0f;
-    private float current_height = 0.0f;
-    private float travel = 0.0f;
-    private float previous_height = 0.0f;
 	void Update () {
-        current_height = transform.position.y;
-        travel = current_height - previous_height;
-        previous_height = current_height;
-
-        Debug.Log(isFalling(travel));
-
 		// On RMB Click, Check if the point is a valid move, if yes then go there.
 		if (Input.GetMouseButtonDown(1)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -41,7 +31,6 @@ public class MainPlayer : MonoBehaviour {
                         if (__.Length != 0) { foreach (GameObject _ in __) Destroy(_); }
                         Instantiate(nav_sprite, new Vector3(smash.position.x, (smash.position.y + 0.1f), smash.position.z), Quaternion.Euler(new Vector3(90, 0, 0)));
                     }
-                    // Debug.Log(NavMesh.SamplePosition());
                 }
             }
 		}
@@ -63,9 +52,5 @@ public class MainPlayer : MonoBehaviour {
 
     public void enableNavMesh() {
         gameObject.GetComponent<NavMeshAgent>().updatePosition = true;
-    }
-
-    public bool isFalling(float travel) {
-        return (travel < 0); 
     }
 }
