@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10725088, g: 0.18092191, b: 0.36531785, a: 1}
+  m_IndirectSpecularColor: {r: 0.10143118, g: 0.1680842, b: 0.33893886, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -194,6 +194,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114872082543811068, guid: 3374f70592d46af4eb8f2e0d42ecf2c8,
+        type: 2}
+      propertyPath: nav_sprite
+      value: 
+      objectReference: {fileID: 1827655385692544, guid: c1984d18550f0bc439ab2bdf221b3cb1,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3374f70592d46af4eb8f2e0d42ecf2c8, type: 2}
   m_IsPrefabParent: 0
@@ -863,7 +869,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1532274719
 Prefab:
@@ -902,7 +908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4489974041249906, guid: a9a0e08cb61a1b44fa3ae3273e689455, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 65107838283591424, guid: a9a0e08cb61a1b44fa3ae3273e689455,
         type: 2}
@@ -985,7 +991,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4489974041249906, guid: a9a0e08cb61a1b44fa3ae3273e689455, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1652792148606542, guid: a9a0e08cb61a1b44fa3ae3273e689455, type: 2}
       propertyPath: m_Name
@@ -1041,7 +1047,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4665824310157900, guid: ce1dc523232534b4ab2bf737f61a18c1, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 108018837098057202, guid: ce1dc523232534b4ab2bf737f61a18c1,
         type: 2}
