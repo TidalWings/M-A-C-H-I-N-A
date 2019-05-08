@@ -28,6 +28,7 @@ public class ItemPickup : MonoBehaviour {
 			//pickupWindow.SetActive (true);
 			//Destroy (gameObject);
 			Debug.Log ("pickup");
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<RoomTransition>().addOntoDelete(this.name);
 		}
 
 		// TODO: Add Left Click feature cause current implentation is for convenience
