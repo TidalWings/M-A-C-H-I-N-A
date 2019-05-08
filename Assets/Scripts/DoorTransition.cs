@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DoorTransition : MonoBehaviour {
 
 	public string scene_name;
+	// TODO: Get a working transition between scenes
 	// private ScreenWipe screenWipe;
 
 	// void Awake() {
@@ -13,9 +14,7 @@ public class DoorTransition : MonoBehaviour {
 	// }
 
 	public void OnTriggerEnter(Collider other) {
-		//yield return new WaitForSeconds (1f);
 		StartCoroutine(SmoothTransition());
-		// // Debug.Log (other.gameObject.name);
 		SceneManager.LoadScene(scene_name);
 	}
 

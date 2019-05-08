@@ -9,13 +9,11 @@ public class ItemIntensity : MonoBehaviour {
 	Light item_light;
 	// TODO: Use things like Mathf.lerp to ACTUALLY do proper transitioning of light intensity values
 	private bool light_flip = true;
-	// Use this for initialization
+	
 	void Start () {
 		item_light = GetComponent<Light>();
-		// Debug.Log(item_light.intensity);
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (light_flip) {
 			item_light.intensity += timer * Time.deltaTime;
