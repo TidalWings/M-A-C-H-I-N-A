@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 23744597609550612}
   - component: {fileID: 195534999526389682}
   - component: {fileID: 114290150035183440}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Alpha Bot
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4832800858891668}
   - component: {fileID: 108323003803014640}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Aggro Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4159038419485974}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4979422007346210}
   - component: {fileID: 135781234525488424}
   - component: {fileID: 114339981137795760}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Aggro Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4639487205686930}
   - component: {fileID: 33632659773087842}
   - component: {fileID: 23160815131762104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4024219103306130}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cube_enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pause_time: 3
   point: {fileID: 1522422192469756}
+  aggro_speed: 2
 --- !u!114 &114339981137795760
 MonoBehaviour:
   m_ObjectHideFlags: 1

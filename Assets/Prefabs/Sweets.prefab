@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4470703245026488}
   - component: {fileID: 212741009664273944}
   - component: {fileID: 136044404856207718}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sweets
   m_TagString: Sweets
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b3383f72e8ab56a44b3b63b25dc409e4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1da2e38a25a2ebc4daa8c6bb62105bdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

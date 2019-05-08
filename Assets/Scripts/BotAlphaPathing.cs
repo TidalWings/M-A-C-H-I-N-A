@@ -18,6 +18,7 @@ public class BotAlphaPathing : MonoBehaviour {
     private bool flip = true;
     private GameObject Player;
     private bool is_aggrod = false;
+    public float aggro_speed = 2.0f;
 
     // Use this for initialization
     void Start() {
@@ -44,7 +45,7 @@ public class BotAlphaPathing : MonoBehaviour {
             }
         } else {
             GetComponent<NavMeshAgent>().SetDestination(Player.transform.position);
-            GetComponent<NavMeshAgent>().speed = 2.0f;
+            GetComponent<NavMeshAgent>().speed = aggro_speed;
         }
     }
 

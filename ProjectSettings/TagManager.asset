@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sweets
+  - Ground
+  - Item
+  - Door
+  - Spawn Point
+  - Enemy
   layers:
   - Default
   - TransparentFX

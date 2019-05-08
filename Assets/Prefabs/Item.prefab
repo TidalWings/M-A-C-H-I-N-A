@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 23450603994706774}
   - component: {fileID: 114639562329647978}
   - component: {fileID: 114164409885217076}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4318002661580262}
   - component: {fileID: 108379608025870240}
   - component: {fileID: 114665159209689250}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Item Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec263bba69dba854795212381145af48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupWindow: {fileID: 0}
 --- !u!114 &114665159209689250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -198,4 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0.1
-  intensity_value: 0.5
+  intensity_value: 1
