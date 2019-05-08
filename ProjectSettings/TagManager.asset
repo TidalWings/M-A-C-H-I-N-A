@@ -7,6 +7,9 @@ TagManager:
   - Sweets
   - Ground
   - Item
+  - Door
+  - Spawn Point
+  - Enemy
   layers:
   - Default
   - TransparentFX
