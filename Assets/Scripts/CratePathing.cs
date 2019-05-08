@@ -14,7 +14,6 @@ public class CratePathing : MonoBehaviour {
     // public float pause_time;
 	public float speed;
     public GameObject point; // TODO: Replace this w/ a Child Point later
-    // private float timer;
     private Vector3 nav_point;
     private Vector3 origin_point;
     private bool flip = true;

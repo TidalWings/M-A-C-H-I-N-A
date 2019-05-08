@@ -20,7 +20,6 @@ public class BotAlphaPathing : MonoBehaviour {
     private bool is_aggrod = false;
     public float aggro_speed = 2.0f;
 
-    // Use this for initialization
     void Start() {
         timer = pause_time;
         nav_agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -29,12 +28,10 @@ public class BotAlphaPathing : MonoBehaviour {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update() {
-        if (is_aggrod == false) {
+        if (!is_aggrod) {
             timer += Time.deltaTime;
             if (timer >= pause_time) {
-                // TODO: One-line this "If"
                 if (flip) {
                     nav_agent.SetDestination(nav_point);
                 } else {
@@ -49,9 +46,7 @@ public class BotAlphaPathing : MonoBehaviour {
         }
     }
 
-    public void setAggro () {
-        is_aggrod = true;
-    }
+    public void setAggro () { is_aggrod = true; }
 
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Player") {

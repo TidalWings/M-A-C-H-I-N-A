@@ -5,21 +5,8 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour {
 	bool pickup = false;
 	[SerializeField] GameObject pickupWindow;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-		
-
-	}
 
 	public void OnTriggerEnter(Collider other) {
-		// Debug.Log("HIT");
-
 		if (other.gameObject.name == "Player") {
 			//pickup code goes before destroy
 			pickup = true;
@@ -27,23 +14,9 @@ public class ItemPickup : MonoBehaviour {
 			gameObject.SetActive (false);
 			//pickupWindow.SetActive (true);
 			//Destroy (gameObject);
-			Debug.Log ("pickup");
+			// Debug.Log ("pickup");
             GameObject.FindGameObjectWithTag("GameController").GetComponent<RoomTransition>().addOntoDelete(this.name);
 		}
-
-		// TODO: Add Left Click feature cause current implentation is for convenience
-        // if (Input.GetMouseButtonDown(0) && other.gameObject.name == "Player") {
-        //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //     RaycastHit hit;
-
-        //     if (Physics.Raycast(ray, out hit)) {
-        //         if (hit.transform.name == "Item") {
-        //         	Debug.Log("ITEM!");
-        //         } else {
-        //         	Debug.Log("NOT Item!");
-        //         }
-        //     }
-        // }
 	}
 	public void OptionOne() {
 		//put inventory code here
