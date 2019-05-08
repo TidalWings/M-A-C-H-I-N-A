@@ -5,32 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class DoorTransition : MonoBehaviour {
 
+	// TODO: Figure out how to use a Public scene instead of ints
 	public string scene_name;
-	// TODO: Get a working transition between scenes
-	// private ScreenWipe screenWipe;
 
-	// void Awake() {
-	// 	screenWipe = FindObjectOfType<ScreenWipe>();
-	// }
+
+
+	//public void OnCollisionEnter(Collision other) {
+		//Debug.Log(other.gameObject);
+		//if (other.gameObject.name == "Larry" || other.gameObject.name == "Player") {
+	//	Debug.Log("hello");
+	//	SceneManager.LoadScene(scene_name);
+		//}
+	//}
 
 	public void OnTriggerEnter(Collider other) {
+		//yield return new WaitForSeconds (1f);
 		StartCoroutine(SmoothTransition());
-		SceneManager.LoadScene(scene_name);
+		// Debug.Log (other.gameObject.name);
+		SceneManager.LoadScene (scene_name);
 	}
 
 	IEnumerator SmoothTransition() {
-		yield return new WaitForSeconds(1f);
-
-		// screenWipe.ToggleWipe(true);
-		// while (!screenWipe.isDone) {
-		// 	yield return null;
-		// }
-
-		// AsyncOperation operation = SceneManager.LoadSceneAsync(scene_name);
-		// while(!operation.isDone) {
-		// 	yield return null;
-		// }
-
-		// screenWipe.ToggleWipe(false);
+		yield return new WaitForSeconds (1f);
 	}
 }
