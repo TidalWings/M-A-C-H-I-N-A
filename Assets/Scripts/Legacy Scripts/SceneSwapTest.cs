@@ -31,7 +31,7 @@ public class SceneSwapTest : MonoBehaviour {
             SceneManager.LoadScene("Boss_Room");
         } else if (Input.GetKeyDown("0")) {
 			if (SceneManager.GetActiveScene().name == "Battle") {
-				// Run this on a BATTLE WIN and you'll return to the Scene w/ the enemies defeated
+                // Run this on a BATTLE WIN and you'll return to the Scene w/ the enemies defeated
                 GameObject.FindGameObjectWithTag("GameController").GetComponent<RoomTransition>().loadPrev();
             }
 		}
