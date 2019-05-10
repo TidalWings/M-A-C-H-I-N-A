@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
  * https://www.youtube.com/watch?v=2PJ99qDsZq4
  */
 
-public class RoomTransition : MonoBehaviour {
+public class GameManagerScript : MonoBehaviour {
 	private string current_scene;
 	private string previous_scene;
 	private HashSet<string> deleted_items = new HashSet<string>();
@@ -15,8 +15,8 @@ public class RoomTransition : MonoBehaviour {
 
 	public float skybox_speed = 0.25f;
 	// CHECKING CLASS INSTANCES IS PART OF THE SINGLETON PATTERN
-	private static RoomTransition _instance = null;
-	public static RoomTransition Instance {
+	private static GameManagerScript _instance = null;
+	public static GameManagerScript Instance {
 		get { return _instance; }
 	}
 

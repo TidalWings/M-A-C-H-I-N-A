@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GoToMenu : MonoBehaviour {
 
 	public void Menu() {
-		Debug.Log("FUCK");
 		SceneManager.LoadScene("Menu");
 	}
 }
