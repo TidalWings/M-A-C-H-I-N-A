@@ -13,7 +13,7 @@ public class MainPlayer : MonoBehaviour {
             if (Input.touchCount == 1) {
                 Touch touch = Input.GetTouch(0);
 
-                if (touch.phase == TouchPhase.Began) {
+                if (touch.phase == TouchPhase.Began || touch.phase == TouchPhase.Moved) {
                     // TODO: Yes I literally reused the code that I could've probably written IFs for... but whatever y'know...
                     Ray ray = Camera.main.ScreenPointToRay(touch.position);
                     RaycastHit rayHit;
@@ -40,7 +40,7 @@ public class MainPlayer : MonoBehaviour {
             }
         } else {
             // On RMB Click, Check if the point is a valid move, if yes then go there.
-            if (Input.GetMouseButtonDown(1)) {
+            if (Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(0) || Input.GetMouseButton(0) || Input.GetMouseButton(1)) {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit rayHit;
                 if (Physics.Raycast(ray, out rayHit)) {
