@@ -16,6 +16,8 @@ public class GameManagerScript : MonoBehaviour {
     public AudioSource overworld_music;
     public AudioSource battle_music;
 
+    public int player_health = 20;
+
     public float skybox_speed = 0.25f;
     // CHECKING CLASS INSTANCES IS PART OF THE SINGLETON PATTERN
     private static GameManagerScript _instance = null;
