@@ -9,6 +9,7 @@ public class RespawnCube : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.gameObject.name == "Player") {
+			GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManagerScript>().player_health_current -= 2;
 			SceneManager.LoadScene(World_Respawn_Name);
 		}
 	}

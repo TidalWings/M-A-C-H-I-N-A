@@ -11,6 +11,7 @@ TagManager:
   - Spawn Point
   - Enemy
   - Audio
+  - Player HUD
   layers:
   - Default
   - TransparentFX

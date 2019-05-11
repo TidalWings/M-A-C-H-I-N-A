@@ -967,6 +967,11 @@ Prefab:
       propertyPath: battle_music
       value: 
       objectReference: {fileID: 2035816587}
+    - target: {fileID: 114647091362603010, guid: 2dbb3bcf862e5954f875c51990de304a,
+        type: 2}
+      propertyPath: hud_object
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2dbb3bcf862e5954f875c51990de304a, type: 2}
   m_IsPrefabParent: 0

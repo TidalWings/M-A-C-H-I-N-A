@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 /**
  * https://www.youtube.com/watch?v=2PJ99qDsZq4
@@ -15,8 +16,8 @@ public class GameManagerScript : MonoBehaviour {
     public AudioSource menu_music;
     public AudioSource overworld_music;
     public AudioSource battle_music;
-
-    public int player_health = 20;
+    public int player_health_current = 20;
+    public int player_health_max = 20;
 
     public float skybox_speed = 0.25f;
     // CHECKING CLASS INSTANCES IS PART OF THE SINGLETON PATTERN
@@ -38,11 +39,19 @@ public class GameManagerScript : MonoBehaviour {
         previous_scene = SceneManager.GetActiveScene().name;
         if (current_scene == "Menu") {
             menu_music.Play();
-            // overworld_music.Play();
         }
     }
 
     void Update() {
+        if (player_health_current != 0) {
+            if (current_scene != "Menu" && current_scene != "Credits" && current_scene != "GameOver") {
+                GameObject.FindGameObjectWithTag("Player HUD").GetComponent<TextMeshProUGUI>().text = ("HP: " + player_health_current + " / " + player_health_max);
+            }
+        } else {
+            this.player_health_current = player_health_max;
+            SceneManager.LoadScene("GameOver");
+        }
+
         // This runs on a NEW SCENE, DO whatever in this IF you need to
         if (current_scene != SceneManager.GetActiveScene().name) {
 

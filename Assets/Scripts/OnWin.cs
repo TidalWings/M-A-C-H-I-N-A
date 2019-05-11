@@ -5,6 +5,6 @@ using UnityEngine;
 public class OnWin : MonoBehaviour {
 
 	public void onWin() {
-        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManagerScript>().loadPrev();
+        	GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManagerScript>().loadPrev();
 	}
 }
