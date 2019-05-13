@@ -19,5 +19,6 @@ public class DialogueController : MonoBehaviour {
 	}
 	public void Ender() {
 		textbox.SetActive (false); //closed popup called by Manager when queue is empty
+		gameObject.SetActive (false); // deactivates dialogue trigger
 	}
 }
