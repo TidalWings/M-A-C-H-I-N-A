@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 687588286}
   - component: {fileID: 687588285}
   - component: {fileID: 687588284}
+  - component: {fileID: 687588287}
   m_Layer: 5
   m_Name: Run
   m_TagString: Untagged
@@ -374,8 +375,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OptionOne
+      - m_Target: {fileID: 687588287}
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -422,6 +423,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 687588282}
+--- !u!114 &687588287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 687588282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4428e882a4810a7468f25f3ba747d3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene_name: 
 --- !u!1 &863303233
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +574,7 @@ GameObject:
   - component: {fileID: 990296096}
   - component: {fileID: 990296095}
   - component: {fileID: 990296094}
+  - component: {fileID: 990296097}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -628,8 +642,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: OptionOne
+      - m_Target: {fileID: 990296097}
+        m_MethodName: OnMouseDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -676,6 +690,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 990296092}
+--- !u!114 &990296097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 990296092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aab05244a6542fb469bfcc07ab8096bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1448181954}
 --- !u!1 &1079339032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,6 +1068,11 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1242507101}
+--- !u!1 &1448181954 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1030991804890246, guid: 7d922670245bd5f4094608751f3db02c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1173904130}
 --- !u!1 &1505266178
 GameObject:
   m_ObjectHideFlags: 0
