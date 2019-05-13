@@ -51,8 +51,8 @@ public class BotAlphaPathing : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.name == "Player") {
             GameObject Controller = GameObject.FindGameObjectWithTag("GameController");
-            Controller.GetComponent<RoomTransition>().addPosition(other.transform.position);
-            Controller.GetComponent<RoomTransition>().addOntoDelete(this.name);
+            Controller.GetComponent<GameManagerScript>().addPosition(other.transform.position);
+            Controller.GetComponent<GameManagerScript>().addOntoDelete(this.name);
             SceneManager.LoadScene("Battle");
         }
     }

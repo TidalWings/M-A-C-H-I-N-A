@@ -36,5 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Boss_Room.unity
     guid: e0eac06c356b60c4ba8c71882caacf8d
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 09b2986b15b1b5b4c871414af8de1061
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: aaca1abadc330f441ade1f69dcbcb41d
+  - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 019395d4dd2d949459f106e938f3ea24

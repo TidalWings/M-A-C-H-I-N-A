@@ -15,7 +15,7 @@ public class ItemPickup : MonoBehaviour {
 			//pickupWindow.SetActive (true);
 			//Destroy (gameObject);
 			// Debug.Log ("pickup");
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<RoomTransition>().addOntoDelete(this.name);
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManagerScript>().addOntoDelete(this.name);
 		}
 	}
 	public void OptionOne() {
