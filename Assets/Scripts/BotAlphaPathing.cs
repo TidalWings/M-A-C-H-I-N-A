@@ -59,4 +59,13 @@ public class BotAlphaPathing : MonoBehaviour {
             SceneManager.LoadScene("Battle");
         }
     }
+
+    // TODO: Fix Box World Push Offs
+    public void enableNavMesh() {
+        gameObject.GetComponent<NavMeshAgent>().updatePosition = true;
+    }
+    
+    public void disableNavMesh() {
+        gameObject.GetComponent<NavMeshAgent>().updatePosition = true;
+    }
 }
