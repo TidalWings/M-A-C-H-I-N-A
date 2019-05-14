@@ -53,6 +53,9 @@ public class BotAlphaPathing : MonoBehaviour {
             GameObject Controller = GameObject.FindGameObjectWithTag("GameController");
             Controller.GetComponent<GameManagerScript>().addPosition(other.transform.position);
             Controller.GetComponent<GameManagerScript>().addOntoDelete(this.name);
+			PlayerPrefs.SetString ("lastLoadedScene", SceneManager.GetActiveScene().name);
+			//string scene_name = PlayerPrefs.GetString("lastLoadedScene");
+			//Debug.Log(scene_name);
             SceneManager.LoadScene("Battle");
         }
     }
