@@ -10,7 +10,9 @@ public class CursorScript : MonoBehaviour {
     public Vector2 hotSpot = Vector2.zero;
 
     void Start() {
-        Cursor.SetCursor(cursorSprite, hotSpot, cursorMode);
+        if (!Application.isMobilePlatform) {
+            Cursor.SetCursor(cursorSprite, hotSpot, cursorMode);
+        }
     }
     // void Update() {
         // TODO: IF we want to do cursor changes
