@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11614039, g: 0.1845935, b: 0.359461, a: 1}
+  m_IndirectSpecularColor: {r: 0.123542406, g: 0.18871602, b: 0.3598319, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -424,7 +424,7 @@ Prefab:
     - target: {fileID: 224950055030440600, guid: d3ba31c3dc1a43143bb02bce4b4d8802,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114739476018106792, guid: d3ba31c3dc1a43143bb02bce4b4d8802,
         type: 2}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 1446775165}
   - component: {fileID: 1446775164}
   - component: {fileID: 1446775167}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dialogue Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1707342818097662, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_Name
@@ -734,7 +734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1969574155
 Prefab:
@@ -773,7 +773,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4849318423157482, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1707342818097662, guid: ea584e0aee893ba418143624680dcd77, type: 2}
       propertyPath: m_Name
@@ -875,7 +875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2078923128
 Prefab:
@@ -914,7 +914,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4488117130778788, guid: b74fd77ed06e60c408ded3efab9eca32, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b74fd77ed06e60c408ded3efab9eca32, type: 2}
@@ -956,7 +956,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4665824310157900, guid: ce1dc523232534b4ab2bf737f61a18c1, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 108018837098057202, guid: ce1dc523232534b4ab2bf737f61a18c1,
         type: 2}
