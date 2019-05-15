@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.123542406, g: 0.18871602, b: 0.3598319, a: 1}
+  m_IndirectSpecularColor: {r: 0.0950811, g: 0.15088457, b: 0.29840612, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 2111235563}
   - component: {fileID: 2111235562}
   - component: {fileID: 2111235561}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dialogue Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
