@@ -1388,6 +1388,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114524971448193838, guid: 769d35dfc31442f4d9d6496866923f0f,
+        type: 2}
+      propertyPath: m_Text
+      value: Plastic Compromise
+      objectReference: {fileID: 0}
+    - target: {fileID: 114441340282848956, guid: 769d35dfc31442f4d9d6496866923f0f,
+        type: 2}
+      propertyPath: m_Text
+      value: Steel Concession
+      objectReference: {fileID: 0}
+    - target: {fileID: 114524971448193838, guid: 769d35dfc31442f4d9d6496866923f0f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 769d35dfc31442f4d9d6496866923f0f, type: 2}
   m_IsPrefabParent: 0
