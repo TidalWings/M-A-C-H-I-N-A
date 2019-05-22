@@ -44,3 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle.unity
     guid: 019395d4dd2d949459f106e938f3ea24
+  - enabled: 1
+    path: Assets/Scenes/The_End.unity
+    guid: b31a424bfae5a6b4994238a58b8b9797
+  - enabled: 1
+    path: Assets/Scenes/GoodBye.unity
+    guid: babfb0dd7f55f4a46a82398746acc2d4
